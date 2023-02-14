@@ -33,6 +33,7 @@ public class IntStack {
 
     /**
      * Return the capacity of the stack.
+     *
      * @return the capacity of the stack
      */
     public int getCapacity() {
@@ -42,6 +43,7 @@ public class IntStack {
     /**
      * Returns whether the stack is full.
      * A further push would throw an exception.
+     *
      * @return true if the stack is full, false if the stack is not full
      */
     public boolean isFull() {
@@ -53,9 +55,16 @@ public class IntStack {
     }
 
     // TODO: Add isEmpty() method
+    public boolean isEmpty() {
+        if (nextPushLocation == 0) {
+            return true;
+        }
+        return false;
+    }
 
     /**
      * Push on int on the stack.
+     *
      * @param element The int to be pushed on the stack
      * @throws ArrayIndexOutOfBoundsException If the stack was already full
      */
@@ -65,6 +74,7 @@ public class IntStack {
 
     /**
      * Pops an int from the stack
+     *
      * @return The poppsed int
      * @throws ArrayIndexOutOfBoundsException If the stack was already empty
      */
